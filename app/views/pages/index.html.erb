@@ -1,2 +1,77 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<%= render 'partials/nav' %>
+
+<div class = "welcomeFairtrade">
+   <h1>Welcome to Fairtrade page</h1>
+</div>
+
+
+
+<div class = "container-fluid-toppage" >
+   <div class="row">
+   	<div class="col-md-6">
+   		<div class="thumbnail">
+   			<img src="https://images.pexels.com/photos/95425/pexels-photo-95425.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb">
+   			<div class="caption">
+   				<h4>What is fairtrade<h4>
+           <br>
+   			</div>
+   		</div>
+   	</div>
+    <div class="col-md-6">
+   		<div class="thumbnail">
+   			<img src="https://images.pexels.com/photos/75652/boards-glasses-smartphone-phone-75652.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb">
+   			<div class="caption">
+   				<h4>Market<h4>
+          <% link_to "Post items as a Supplier", posts_path %><button type="button" class="btn btn-primary" data-toggle="button"></button>
+           <br>
+   			</div>
+   		</div>
+   	</div>
+   </div>
+</div>
+
+<div class = "container-fluid-toppage2" >
+   <div class="col-md-6">
+     <div class="thumbnail">
+       <img src="http://img11.deviantart.net/a5f8/i/2012/267/5/6/corkboard_act1_by_infinityunbound-d5fro0i.png">
+       <div class="caption">
+         <h4>Corkboard<h4>
+          <br>
+       </div>
+     </div>
+   </div>
+   <div class="row">
+   	<div class="col-md-6">
+   		<div class="thumbnail">
+   			<img src="https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb">
+   			<div class="caption">
+   				<h4>Inquiry and Contact<h4>
+           <br>
+   			</div>
+   		</div>
+   	</div>
+
+   </div>
+</div>
+
+<h2>Items</h2>
+
+<% @posts.each do |post| %>
+desplay current 4 items or each of laetest products
+<div class="row">
+	<div class="col-xs-6 col-md-3">
+		<div class="thumbnail">
+			<img src="https://images.pexels.com/photos/372173/pexels-photo-372173.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb">
+			<div class="caption">
+				<h4><%= item.item_name %><h4>
+				<h4><%= @review.review_title.inspect %></h4>
+        <br>
+        <div class="btn-group" data-toggle="buttons-checkbox">
+          <button type="button" class="btn btn-primary-see-more"><%= link_to "See more", item_path(item.id) %></button>
+          <button type="button" class="btn btn-primary-purchase">Purchase</button>
+        </div>
+<%= link_to "See more", item_path(item.id) %>
+			</div>
+		</div>
+	</div>
+  <% end %>
