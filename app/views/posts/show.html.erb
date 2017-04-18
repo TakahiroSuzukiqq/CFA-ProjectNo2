@@ -25,6 +25,12 @@
   <%#= @post.user %>
 </p> -->
 
+<%= @post.inspect %>
+<br>
+<% @post.images.each do |images| %>
+<img src ="<%= @post.images %>" alt="images">
+<% end %>
+<br>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %> |
 <%= link_to 'Top page', root_path %>
