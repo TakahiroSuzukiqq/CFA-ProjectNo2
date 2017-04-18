@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_current_supplier, only: [:show, :edit, :update, :destroy, :create]
+
 
   # GET /posts
   # GET /posts.json
@@ -26,7 +28,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-    @post.user_id = @user.id
+    @post.user_id = current_user.id
     @comment = Comment.new
 
     respond_to do |format|
