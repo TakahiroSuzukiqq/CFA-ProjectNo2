@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :suppliers
+  resources :comments
+  resources :posts
   devise_for :users
   root 'pages#index'
 

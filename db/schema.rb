@@ -10,10 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170418045013) do
+ActiveRecord::Schema.define(version: 20170418065254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "item_name"
+    t.text     "item_description"
+    t.string   "supplier_name"
+    t.text     "supplier_description"
+    t.integer  "user_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
+  end
+
+  create_table "suppliers", force: :cascade do |t|
+    t.string   "supplier_name"
+    t.string   "supplier_phone_number"
+    t.string   "company_number"
+    t.boolean  "verified"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -28,8 +57,13 @@ ActiveRecord::Schema.define(version: 20170418045013) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "supplier_id"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+    t.index ["supplier_id"], name: "index_users_on_supplier_id", using: :btree
   end
 
+  add_foreign_key "comments", "users"
+  add_foreign_key "posts", "users"
+  add_foreign_key "users", "suppliers"
 end
