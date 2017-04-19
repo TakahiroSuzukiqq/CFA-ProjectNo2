@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+
+<%= @post.inspect %>
+<br>
+<% @post.images.each do |images| %>
+<img src ="<%= @post.images %>" alt="images">
+<% end %>
+
 <p>
   <strong>Item name:</strong>
   <%= @post.item_name %>
@@ -20,17 +27,18 @@
   <%= @post.supplier_description %>
 </p>
 
+<% @comments.each do |comment|%>
+  <strong>Review:</strong>
+  <%= comment.inspect %>
+<% end %>
 <!-- <p>
   <strong>User:</strong>
   <%#= @post.user %>
 </p> -->
 
-<%= @post.inspect %>
-<br>
-<% @post.images.each do |images| %>
-<img src ="<%= @post.images %>" alt="images">
-<% end %>
+
 <br>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %> |
-<%= link_to 'Top page', root_path %>
+<%= link_to 'Top page', root_path %> |
+<%= link_to 'Post a comment', comments_path %>
