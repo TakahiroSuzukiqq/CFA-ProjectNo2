@@ -15,6 +15,17 @@
   </thead>
 
   <tbody>
+ <% if user_signed_in? %>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.item_name %></td>
+        <td><%= post.item_description %></td>
+        <td><%= post.supplier_name %></td>
+        <td><%= post.supplier_description %></td>
+        <!-- <td><%= post.user %></td> -->
+      </tr>
+    <% end %>
+ <% else %>
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.item_name %></td>
@@ -27,9 +38,14 @@
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+ <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Post', new_post_path %>
+<% if user_signed_in? %>
+  <%= link_to 'Toppage', root_path %>
+<% else %>
+  <%= link_to 'New Post', new_post_path %>
+  <%= link_to 'Toppage', root_path %>
+<% end %>

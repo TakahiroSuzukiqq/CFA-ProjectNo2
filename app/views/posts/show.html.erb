@@ -1,37 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 
-<!-- # <%#= @post.inspect %>
-# <br> -->
-<% @post.images.each do |image| %>
-  <img src ="<%= image %>" alt="Image">
-<% end %>
+   <% @post.images.each do |image| %>
+     <img src ="<%= image %>" alt="Image">
+   <% end %>
 
-<p>
-  <strong>Item name:</strong>
-  <%= @post.item_name %>
-</p>
+   <p>
+     <strong>Item name:</strong>
+     <%= @post.item_name %>
+   </p>
 
-<p>
-  <strong>Item description:</strong>
-  <%= @post.item_description %>
-</p>
+   <p>
+     <strong>Item description:</strong>
+     <%= @post.item_description %>
+   </p>
 
-<p>
-  <strong>Supplier name:</strong>
-  <%= @post.supplier_name %>
-</p>
+   <p>
+     <strong>Supplier name:</strong>
+     <%= @post.supplier_name %>
 
-<p>
-  <strong>Supplier description:</strong>
-  <%= @post.supplier_description %>
-</p>
+   <p>
+   <strong>Supplier description:</strong>
+     <%= @post.supplier_description %>
+   </p>
 
-<% @comments.each do |comment|%>
-  <strong>Comments:</strong>
-  <%= comment.title %>
-<% end %>
-<!-- <p>
+   <% @comments.each do |comment|%>
+     <strong>Comments:</strong>
+     <%= comment.title %>
+   <% end %>
+
+   <!-- <p>
   <strong>User:</strong>
   <%#= @post.user %>
 </p> -->

@@ -3,7 +3,7 @@ class PagesController < ApplicationController
     @post = Post.new
     @posts = Post.all
     @comment = Comment.new
-    @post_images = @post.images
+    # @post_images = @post.images
   end
 
   def post_params
