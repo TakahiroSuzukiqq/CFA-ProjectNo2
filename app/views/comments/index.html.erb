@@ -4,23 +4,22 @@
 
 <table>
   <thead>
-    <tr>
-      <th>User</th>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
+
   </thead>
 
   <tbody>
     <% @comments.each do |comment| %>
-        <%= comment.user_name %>
-        <%= comment.title %>
-        <%= comment.content %>
+        User name :<%= comment.user_name %>
+        <br>
+        Title :<%= comment.title %>
+        <br>
+        Content :<%= comment.content %>
         <br>
         <%= link_to 'Show', comment %> |
         <%= link_to 'Edit', edit_comment_path(comment) %> |
         <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <br>
+        <br>
     <% end %>
 
   </tbody>
@@ -28,4 +27,6 @@
 
 <br>
 
-<%= link_to 'New Comment', new_comment_path %>
+<%= link_to 'New Comment', new_comment_path %> |
+<%= link_to 'Item', posts_path %> |
+<%= link_to 'Toppage', root_path %>
