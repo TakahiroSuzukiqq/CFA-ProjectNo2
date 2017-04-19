@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170418065254) do
+ActiveRecord::Schema.define(version: 20170419002036) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,9 @@ ActiveRecord::Schema.define(version: 20170418065254) do
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "post_id"
+    t.string   "user_name"
+    t.index ["post_id"], name: "index_comments_on_post_id", using: :btree
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
@@ -32,6 +35,10 @@ ActiveRecord::Schema.define(version: 20170418065254) do
     t.integer  "user_id"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.integer  "supplier_id"
+    t.string   "image"
+    t.string   "images"
+    t.index ["supplier_id"], name: "index_posts_on_supplier_id", using: :btree
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 
@@ -42,6 +49,8 @@ ActiveRecord::Schema.define(version: 20170418065254) do
     t.boolean  "verified"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+    t.integer  "supplier_id"
+    t.index ["supplier_id"], name: "index_suppliers_on_supplier_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -58,12 +67,17 @@ ActiveRecord::Schema.define(version: 20170418065254) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.integer  "supplier_id"
+    t.string   "avatar"
+    t.string   "image"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
     t.index ["supplier_id"], name: "index_users_on_supplier_id", using: :btree
   end
 
+  add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
+  add_foreign_key "posts", "suppliers"
   add_foreign_key "posts", "users"
+  add_foreign_key "suppliers", "suppliers"
   add_foreign_key "users", "suppliers"
 end
