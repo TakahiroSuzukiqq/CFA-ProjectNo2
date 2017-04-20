@@ -5,12 +5,7 @@
    <h1>Welcome to Fairtrade page</h1>
 </div>
 
-<% if user_signed_in? %>
-   <% if current_user.has_role? :admin %>
-      <%= link_to 'Supplier Registration', admin_index_path %>
-   <% else %>
-   <% end %>
-<% end %>
+
 
    <div class = "post-new-item">
      <%= link_to 'Post new item', posts_path %>
@@ -66,9 +61,9 @@
    </div>
 </div>
 
-<h2>Items</h2>
+<h2>New arrival</h2>
 display current 4 items or each of laetest products
-<% @posts.reverse.each do |post| %>
+<% @posts.reverse[0..2].each do |post| %>
 <div class="row">
 	<div class="col-xs-6 col-md-3">
 		<div class="thumbnail">
@@ -76,7 +71,6 @@ display current 4 items or each of laetest products
 			<div class="caption">
 				<h4><%= post.item_name %><h4>
         <%= link_to "See more", post_path(post.id) %>
-
         <br>
         <div class="btn-group" data-toggle="buttons-checkbox">
           <button type="button" class="btn btn-primary-see-more"><%= link_to "See more", post_path(post.id) %></button>
@@ -85,4 +79,5 @@ display current 4 items or each of laetest products
 			</div>
 		</div>
 	</div>
+</div>
   <% end %>

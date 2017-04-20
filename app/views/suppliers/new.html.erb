@@ -2,4 +2,10 @@
 
 <%= render 'form', supplier: @supplier %>
 
+
 <%= link_to 'Back', suppliers_path %>
+<br>
+<br>
+<% if user_signed_in? && (current_user.has_role? :admin) %>
+  <%= link_to 'Supplier Registration', admin_index_path %>
+<% end %>

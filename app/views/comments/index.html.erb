@@ -15,7 +15,7 @@
     <% @comments.each do |comment| %>
         User name :<%= comment.user_name %><br>
         Title :<%= comment.title %><br>
-        Content :<%= comment.content %>
+        Review :<%= comment.content %>
         <br>
         <%= link_to 'Show', comment %> |
         <%= link_to 'Edit', edit_comment_path(comment) %> |
