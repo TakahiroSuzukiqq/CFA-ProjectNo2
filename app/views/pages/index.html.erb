@@ -1,12 +1,22 @@
 <%= render 'partials/nav' %>
+<p id="notice"><%= notice %></p>
 
 <div class = "welcomeFairtrade">
    <h1>Welcome to Fairtrade page</h1>
 </div>
 
-<div class = "post-new-item">
-  <%= link_to 'Post new item', posts_path %>
-</div>
+<% if user_signed_in? %>
+   <% if current_user.has_role? :admin %>
+      <%= link_to 'Supplier Registration', admin_index_path %>
+   <% else %>
+   <% end %>
+<% end %>
+
+   <div class = "post-new-item">
+     <%= link_to 'Post new item', posts_path %>
+   </div>
+
+
 
 <div class = "container-fluid-toppage" >
    <div class="row">

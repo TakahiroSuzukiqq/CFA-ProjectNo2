@@ -1,0 +1,15 @@
+<h1>Admin#index</h1>
+<p>Find me in app/views/admin/index.html.erb</p>
+
+<% @suppliers.reverse.each do |supplier| %>
+    Supplier name : <%= supplier.supplier_name %><br>
+    Supplier phone number : <%= supplier.supplier_phone_number %><br>
+    Supplier company number : <%= supplier.company_number %><br>
+    Verified : <%= supplier.verified %><br>
+    <%= link_to 'Show', supplier %> |
+    <%= link_to 'Edit', edit_supplier_path(supplier) %> |
+    <%= link_to 'Destroy', supplier, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <br>
+    <br>
+  </tr>
+<% end %>
