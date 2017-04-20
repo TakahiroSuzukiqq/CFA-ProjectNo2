@@ -5,9 +5,13 @@
    <h1>Welcome to Fairtrade page</h1>
 </div>
 
-<div class = "post-new-item">
-  <%= link_to 'Post new item', posts_path %>
-</div>
+<% if supplier_verified == true %>
+  <div class = "post-new-item">
+    <%= link_to 'Post new item', posts_path %>
+  </div>
+<% else %>
+<% end %>
+
 
 <div class = "container-fluid-toppage" >
    <div class="row">

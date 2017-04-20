@@ -10,11 +10,14 @@
     </tr>
   </thead>
   <tbody>
-    <% @users.each do |user| %>
+    <% @suppliers.each do |supplier| %>
     <tr>
-      <td><%= user.id %></td>
-      <td><%= user.email %></td>
-      <td><%= user.type %></td>
+      <td><%= supplier.id %></td>
+      <td><%= supplier.name %></td>
+      <td><%= supplier.phone_number %></td>
+      <td><%= supplier.email %></td>
+      <td><%= supplier.company_number %></td>
+      <td><%= supplier.type %></td>
     </tr>
     <% end %>
   </tbody>
