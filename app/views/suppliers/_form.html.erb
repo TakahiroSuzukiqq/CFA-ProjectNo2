@@ -32,15 +32,16 @@
   </div>
 
   <% if user_signed_in? %>
-     <% if current_user.has_role? :admin %>
+    <% if current_user.has_role? :admin %>
        <div class="field">
          <%= f.label :verified %>
          <%= f.check_box :verified %>
        </div>
-     <% else %>
-     <% end %>
+    <% end %>
   <% end %>
+
 
   <div class="actions">
     <%= f.submit %>
   </div>
+<% end %>

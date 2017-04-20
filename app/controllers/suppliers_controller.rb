@@ -1,6 +1,6 @@
 class SuppliersController < ApplicationController
   before_action :set_supplier, only: [:show, :edit, :update, :destroy]
-  before_action :set_current_supplier, only: [:create]
+  before_action :current_supplier, only: [:create]
 
   # GET /suppliers
   # GET /suppliers.json
@@ -26,7 +26,7 @@ class SuppliersController < ApplicationController
   # POST /suppliers.json
   def create
     @supplier = Supplier.new(supplier_params)
-    @supplier.supplier_id = current_user.id
+    @supplier.user_id = current_user.id
 
     respond_to do |format|
       if @supplier.save
@@ -69,12 +69,16 @@ class SuppliersController < ApplicationController
       @supplier = Supplier.find(params[:id])
     end
 
-    def set_current_supplier
+    def current_supplier
       @supplier = current_user
     end
 
+    # def set_current_user
+    #   @user = current_user
+    # end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def supplier_params
-      params.require(:supplier).permit(:supplier_name, :supplier_phone_number, :company_number, :verified, :email, :supplier_id)
+      params.require(:supplier).permit(:supplier_name, :supplier_phone_number, :company_number, :verified, :email, :supplier_id, :user_id)
     end
 end
