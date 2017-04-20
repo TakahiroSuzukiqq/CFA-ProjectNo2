@@ -6,6 +6,12 @@
 </p>
 
 <p>
+  <strong>Supplier email:</strong>
+  <%= current_user.email %>
+</p>
+
+
+<p>
   <strong>Supplier phone number:</strong>
   <%= @supplier.supplier_phone_number %>
 </p>
@@ -15,10 +21,10 @@
   <%= @supplier.company_number %>
 </p>
 
-<p>
-  <strong>Verified:</strong>
-  <%= @supplier.verified %>
-</p>
+  <p>
+    <strong>Verified:</strong>
+    <%= @supplier.verified %>
+  </p>
 
-<%= link_to 'Edit', edit_supplier_path(@supplier) %> |
-<%= link_to 'Back', suppliers_path %>
+<%= link_to 'Back', suppliers_path %> |
+<%= link_to 'Toppage',  root_path %>

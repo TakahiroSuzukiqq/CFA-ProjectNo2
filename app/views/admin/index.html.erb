@@ -1,24 +1,15 @@
 <h1>Admin#index</h1>
 <p>Find me in app/views/admin/index.html.erb</p>
 
-<table>
-  <thead>
-    <tr>
-      <td>ID</td>
-      <td>Email</td>
-      <td>User_type</td>
-    </tr>
-  </thead>
-  <tbody>
-    <% @suppliers.each do |supplier| %>
-    <tr>
-      <td><%= supplier.id %></td>
-      <td><%= supplier.name %></td>
-      <td><%= supplier.phone_number %></td>
-      <td><%= supplier.email %></td>
-      <td><%= supplier.company_number %></td>
-      <td><%= supplier.type %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @suppliers.reverse.each do |supplier| %>
+    Supplier name : <%= supplier.supplier_name %><br>
+    Supplier phone number : <%= supplier.supplier_phone_number %><br>
+    Supplier company number : <%= supplier.company_number %><br>
+    Verified : <%= supplier.verified %><br>
+    <%= link_to 'Show', supplier %> |
+    <%= link_to 'Edit', edit_supplier_path(supplier) %> |
+    <%= link_to 'Destroy', supplier, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <br>
+    <br>
+  </tr>
+<% end %>

@@ -5,6 +5,8 @@ class AdminController < ApplicationController
   def index
     @supplier = Supplier.new
     @suppliers = Supplier.all
+    @user = User.new
+    @usera = User.all
   end
 
     private

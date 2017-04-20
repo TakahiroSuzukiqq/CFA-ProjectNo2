@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%#= f.label :email %>
+    <%#= f.text_field :email %>
+  </div>
+
+  <div class="field">
     <%= f.label :supplier_phone_number %>
     <%= f.text_field :supplier_phone_number %>
   </div>
@@ -26,10 +31,13 @@
     <%= f.text_field :company_number %>
   </div>
 
+<% if user_role = "admin" %>
   <div class="field">
-    <%= f.label :verified %>
-    <%= f.check_box :verified %>
+    <%#= f.label :verified %>
+    <%#= f.check_box :verified %>
   </div>
+<% else %>
+<% end %>
 
   <div class="actions">
     <%= f.submit %>

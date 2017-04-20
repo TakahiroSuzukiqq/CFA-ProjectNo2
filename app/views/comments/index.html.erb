@@ -8,11 +8,13 @@
   </thead>
 
   <tbody>
+    <% @post.images.each do |image| %>
+      <img src ="<%= image %>" alt="Image">
+    <% end %>
+
     <% @comments.each do |comment| %>
-        User name :<%= comment.user_name %>
-        <br>
-        Title :<%= comment.title %>
-        <br>
+        User name :<%= comment.user_name %><br>
+        Title :<%= comment.title %><br>
         Content :<%= comment.content %>
         <br>
         <%= link_to 'Show', comment %> |
