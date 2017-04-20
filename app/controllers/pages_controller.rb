@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:title)
+    params.require(:comment).permit(:title, :user_id)
   end
 
 end

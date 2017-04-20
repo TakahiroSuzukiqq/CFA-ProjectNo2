@@ -23,10 +23,14 @@
    <strong>Supplier description:</strong>
      <%= @post.supplier_description %>
    </p>
-
-   <% @comments.reverse[0..2]each do |comment|%>
+<br>
+<br>
+   <% @comments.reverse[0..2].each do |comment|%>
      <strong>Review:</strong>
-     <%= comment.title %>
+     User name : <%= comment.user_name %><br>
+     Title :<%= comment.title %><br>
+     Content :<br><%= comment.content %><br>
+     <br>
    <% end %>
 
    <!-- <p>
@@ -36,10 +40,13 @@
 
 
 <br>
-   <%= link_to 'Edit', edit_post_path(@post) %> |
-   <%= link_to 'Back', posts_path %> |
-   <%= link_to 'Top page', root_path %>
 
+<% if user_signed_in? %>
    <%= link_to 'Back', posts_path %> |
    <%= link_to 'Top page', root_path %> |
    <%= link_to 'Post a comment', new_comment_path %>
+<% else %>
+   <%= link_to 'Edit', edit_post_path(@post) %> |
+   <%= link_to 'Back', posts_path %> |
+   <%= link_to 'Top page', root_path %>
+<% end %>

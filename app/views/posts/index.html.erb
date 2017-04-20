@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1>All Items</h1>
 
 <table>
   <thead>
@@ -16,27 +16,32 @@
 
   <tbody>
  <% if user_signed_in? %>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.item_name %></td>
-        <td><%= post.item_description %></td>
-        <td><%= post.supplier_name %></td>
-        <td><%= post.supplier_description %></td>
-        <!-- <td><%= post.user %></td> -->
-      </tr>
-    <% end %>
+   <% @posts.reverse.each do |post| %>
+      <% @post.images.each do |image| %>
+         <img src ="<%= image %>" alt="Image">
+      <% end %>
+     Item name :<%= post.item_name %><br>
+     Item description :<%= post.item_description %><br>
+     Supplier name :<%= post.supplier_name %><br>
+     Supplier description :<%= post.supplier_description %><br>
+   <% end %>
  <% else %>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.item_name %></td>
-        <td><%= post.item_description %></td>
-        <td><%= post.supplier_name %></td>
-        <td><%= post.supplier_description %></td>
+    <% @posts.reverse.each do |post| %>
+       <% @post.images.each do |image| %>
+          <img src ="<%= image %>" alt="Image">
+       <% end %>
+        Item name :<%= post.item_name %><br>
+        Item description :<%= post.item_description %><br>
+        Supplier name :<%= post.supplier_name %><br>
+        Supplier description :<%= post.supplier_description %><br>
         <!-- <td><%= post.user %></td> -->
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <%= link_to 'Show', post %> |
+          <% if user_signed_in? %> |
+          <% else %>
+             <%= link_to 'Edit', edit_post_path(post) %> |
+          <% end %>
+          <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+        <br>
     <% end %>
  <% end %>
   </tbody>

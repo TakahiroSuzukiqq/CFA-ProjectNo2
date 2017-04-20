@@ -6,9 +6,9 @@ class AdminController < ApplicationController
     @supplier = Supplier.new
     @suppliers = Supplier.all
     @user = User.new
-    @user = User.all
+    @usera = User.all
   end
-
+  
     private
 
   def authorize_user
