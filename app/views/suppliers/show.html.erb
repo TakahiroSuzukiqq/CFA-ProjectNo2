@@ -1,15 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<h3>Supplier Profile</h3>
+<br>
+
 <p>
   <strong>Supplier name:</strong>
   <%= @supplier.supplier_name %>
 </p>
-
-<p>
-  <strong>Supplier email:</strong>
-  <%= current_user.email %>
-</p>
-
 
 <p>
   <strong>Supplier phone number:</strong>
@@ -21,10 +18,21 @@
   <%= @supplier.company_number %>
 </p>
 
-  <p>
+<% if user_signed_in? %>
+  <% if current_user.has_role? :admin %>
+    <p>
     <strong>Verified:</strong>
-    <%= @supplier.verified %>
-  </p>
+      <%= @supplier.verified %>
+    </p>
+  <% end %>
+<% end %>
 
-<%= link_to 'Back', suppliers_path %> |
-<%= link_to 'Toppage',  root_path %>
+<% if user_signed_in? %>
+  <% if current_user.has_role? :admin %>
+     <%= link_to 'Admin index', admin_index_path %> |
+     <%= link_to 'Toppage',  root_path %>
+  <% else%>
+     <%= link_to 'Back', suppliers_path %> |
+     <%= link_to 'Toppage',  root_path %>
+  <% end %>
+<% end %>

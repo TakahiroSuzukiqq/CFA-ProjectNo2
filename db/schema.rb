@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170420023014) do
+ActiveRecord::Schema.define(version: 20170420103025) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,12 +56,14 @@ ActiveRecord::Schema.define(version: 20170420023014) do
     t.string   "supplier_name"
     t.string   "supplier_phone_number"
     t.string   "company_number"
-    t.boolean  "verified"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.boolean  "verified",              default: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.integer  "supplier_id"
     t.string   "email"
+    t.integer  "user_id"
     t.index ["supplier_id"], name: "index_suppliers_on_supplier_id", using: :btree
+    t.index ["user_id"], name: "index_suppliers_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -97,5 +99,6 @@ ActiveRecord::Schema.define(version: 20170420023014) do
   add_foreign_key "posts", "suppliers"
   add_foreign_key "posts", "users"
   add_foreign_key "suppliers", "suppliers"
+  add_foreign_key "suppliers", "users"
   add_foreign_key "users", "suppliers"
 end

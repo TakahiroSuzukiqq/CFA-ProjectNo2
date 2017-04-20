@@ -8,7 +8,7 @@
         Supplier company number : <%= supplier.company_number %><br>
         Verified : <%= supplier.verified %><br>
         <%= link_to 'Show', supplier %> |
-        <%#= link_to 'Edit', edit_supplier_path(supplier) %> |
+        <%#= link_to 'Edit', edit_supplier_path(supplier) %>
         <%= link_to 'Destroy', supplier, method: :delete, data: { confirm: 'Are you sure?' } %>
         <br>
         <br>
@@ -17,4 +17,11 @@
 
 <br>
 
-<%= link_to 'New Supplier', new_supplier_path %>
+<% if user_signed_in? %>
+  <% if current_user.has_role? :admin %>
+     <%= link_to 'Admin index', admin_index_path %> |
+     <%= link_to 'New Supplier', new_supplier_path %>
+  <% else %>
+     <%= link_to 'New Supplier', new_supplier_path %>
+  <% end %>
+<% end %>

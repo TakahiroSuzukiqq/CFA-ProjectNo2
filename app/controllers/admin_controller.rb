@@ -6,7 +6,7 @@ class AdminController < ApplicationController
     @supplier = Supplier.new
     @suppliers = Supplier.all
     @user = User.new
-    @usera = User.all
+    @user = User.all
   end
 
     private
