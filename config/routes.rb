@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :pages
   get 'admin/index'
   resources :charges
   resources :suppliers

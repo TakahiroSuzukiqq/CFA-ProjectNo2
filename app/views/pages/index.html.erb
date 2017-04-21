@@ -80,7 +80,10 @@ display current 4 items or each of laetest products
 <div class="row">
 	<div class="col-xs-6 col-md-3">
 		<div class="thumbnail">
-        <!-- <img src ="<%#= image %>" alt="Image"> -->
+      <div class="field">
+        <%= image_tag @post.images %>
+        <%= @post.inspect %>
+      </div>
 			<div class="caption">
 				<h4><%= post.item_name %><h4>
         <br>

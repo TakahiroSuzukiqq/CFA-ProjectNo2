@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   rolify
   after_create :assign_default_role
+  mount_uploaders :images, AvatarUploader
+  serialize :images, JSON # If you use SQLite, add this line.
+
 
  def assign_default_role
    self.add_role(:member) if self.roles.blank?
