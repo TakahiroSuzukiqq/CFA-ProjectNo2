@@ -11,14 +11,12 @@
       Item description :<%= post.item_description %><br>
       Supplier name :<%= post.supplier_name %><br>
       Supplier description :<%= post.supplier_description %><br>
-      <br>
-      <br>
    <% end %>
- <% else %>
+<% else %>
    <% @posts.reverse.each do |post| %>
-      <% @post.images.each do |image| %>
-          <img src ="<%= image %>" alt="Image">
-      <% end %>
+      <!-- <%# @post.images.each do |image| %>
+          <img src ="<%#= image %>" alt="Image">
+      <%# end %> -->
        Item name :<%= post.item_name %><br>
        Item description :<%= post.item_description %><br>
        Supplier name :<%= post.supplier_name %><br>
