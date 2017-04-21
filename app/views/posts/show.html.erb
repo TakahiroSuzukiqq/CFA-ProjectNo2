@@ -4,7 +4,8 @@
    <% @post.images.each do |image| %>
      <img src ="<%= image %>" alt="Image">
    <% end %>
-
+<br>
+<br>
    <p>
      <strong>Item name:</strong>
      <%= @post.item_name %>
@@ -24,10 +25,10 @@
      <%= @post.supplier_description %>
    </p>
 
-   <p>
+   <!-- <p>
    <strong>ID:</strong>
-     <%= @post.id %>
-   </p>
+     <%#S= @post.id %>
+   </p> -->
 <br>
 <br>
 <% @comments.reverse[0..2].each do |comment|%>
@@ -42,7 +43,14 @@
 <% end %>
 
 <br>
-  <%= render 'partials/stripe', post: @post %>
+<% if user_signed_in? %>
+  <% if current_user.supplier.present? %>
+    <% if current_user.supplier.verified %>
+    <% else %>
+      <%= render 'partials/stripe', post: @post %>
+    <% end %>
+  <% end %>
+<% end %>
 <br>
 <% if user_signed_in? %>
    <%= link_to 'Back', posts_path %> |

@@ -75,9 +75,9 @@
 </div>
 
 <h2>New arrival</h2>
-display current 4 items or each of laetest products
-<% @posts.reverse[0..2].each do |post| %>
+<br>
 <div class="row">
+<% @posts.reverse[0..3].each do |post| %>
 	<div class="col-xs-6 col-md-3">
 		<div class="thumbnail">
         <!-- <img src ="<%#= image %>" alt="Image"> -->
@@ -93,5 +93,5 @@ display current 4 items or each of laetest products
 			</div>
 		</div>
 	</div>
+    <% end %>
 </div>
-  <% end %>
