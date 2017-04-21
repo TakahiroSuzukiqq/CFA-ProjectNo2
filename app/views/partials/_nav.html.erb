@@ -35,9 +35,13 @@
            <li><%= link_to 'Login', new_user_session_path  %></li>
           <% end %>
         </li>
-        <li>
-          <%= link_to 'Registar as Supplier', new_supplier_path %>
-        </li>
+        <% if user_signed_in? %>
+          <% if !current_user.supplier.present? %>
+            <li>
+              <%= link_to 'Registar as Supplier', new_supplier_path %>
+            </li>
+          <% end %>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

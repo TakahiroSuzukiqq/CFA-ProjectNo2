@@ -5,13 +5,15 @@
    <h1>Welcome to Fairtrade page</h1>
 </div>
 
-<!-- <#% if user_signed_in?%>
-<#% if @supplier.current_user_id == true %> -->
-   <div class = "post-new-item">
-     <%= link_to 'Post new item', posts_path %>
-   </div>
-<!-- <#% end %>
-<#% end %> -->
+<% if user_signed_in? %>
+  <% if current_user.supplier.present? %>
+    <% if current_user.supplier.verified %>
+       <div class = "post-new-item">
+         <%= link_to 'Post new item', posts_path %>
+       </div>
+    <% end %>
+  <% end %>
+<% end %>
 
 <div class = "container-fluid-toppage" >
    <div class="row">

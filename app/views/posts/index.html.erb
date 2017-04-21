@@ -2,50 +2,37 @@
 
 <h1>All Items</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Item name</th>
-      <th>Item description</th>
-      <th>Supplier name</th>
-      <th>Supplier description</th>
-      <!-- <th>User</th> -->
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
- <% if user_signed_in? %>
+<% if user_signed_in? %>
    <% @posts.reverse.each do |post| %>
       <% @post.images.each do |image| %>
          <img src ="<%= image %>" alt="Image">
       <% end %>
-     Item name :<%= post.item_name %><br>
-     Item description :<%= post.item_description %><br>
-     Supplier name :<%= post.supplier_name %><br>
-     Supplier description :<%= post.supplier_description %><br>
+      Item name :<%= post.item_name %><br>
+      Item description :<%= post.item_description %><br>
+      Supplier name :<%= post.supplier_name %><br>
+      Supplier description :<%= post.supplier_description %><br>
+      <br>
+      <br>
    <% end %>
  <% else %>
-    <% @posts.reverse.each do |post| %>
-       <% @post.images.each do |image| %>
+   <% @posts.reverse.each do |post| %>
+      <% @post.images.each do |image| %>
           <img src ="<%= image %>" alt="Image">
-       <% end %>
-        Item name :<%= post.item_name %><br>
-        Item description :<%= post.item_description %><br>
-        Supplier name :<%= post.supplier_name %><br>
-        Supplier description :<%= post.supplier_description %><br>
-        <!-- <td><%= post.user %></td> -->
-        <%= link_to 'Show', post %> |
-          <% if user_signed_in? %> |
-          <% else %>
-             <%= link_to 'Edit', edit_post_path(post) %> |
-          <% end %>
-          <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %><br>
-        <br>
-    <% end %>
- <% end %>
-  </tbody>
-</table>
+      <% end %>
+       Item name :<%= post.item_name %><br>
+       Item description :<%= post.item_description %><br>
+       Supplier name :<%= post.supplier_name %><br>
+       Supplier description :<%= post.supplier_description %><br>
+       <!-- <td><%= post.user %></td> -->
+      <%= link_to 'Show', post %> |
+         <% if user_signed_in? %> |
+         <% else %>
+            <%= link_to 'Edit', edit_post_path(post) %> |
+      <% end %>
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+    <br>
+   <% end %>
+<% end %>
 
 <br>
 <% if user_signed_in? %>

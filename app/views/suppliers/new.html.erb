@@ -5,4 +5,9 @@
 <%= link_to 'Back', suppliers_path %>
 <br>
 <br>
-<%= link_to 'Supplier Registration', admin_index_path %>
+
+<% if user_signed_in? %>
+  <% if current_user.has_role? :admin %>
+    <%= link_to 'Supplier Registration', admin_index_path %>
+  <% end %>
+<% end %>
