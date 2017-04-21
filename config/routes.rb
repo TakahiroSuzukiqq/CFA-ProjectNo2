@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
   get 'admin/index'
-
+  resources :charges
   resources :suppliers
-
   resources :posts do
     resources :comments
   end
-
   devise_for :users
   root 'pages#index'
 

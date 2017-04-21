@@ -42,7 +42,8 @@
 <% end %>
 
 <br>
-
+  <%= render 'partials/stripe', post: @post %>
+<br>
 <% if user_signed_in? %>
    <%= link_to 'Back', posts_path %> |
    <%= link_to 'Top page', root_path %> |
