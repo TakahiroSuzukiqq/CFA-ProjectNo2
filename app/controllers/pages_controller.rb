@@ -10,8 +10,8 @@ class PagesController < ApplicationController
     params.require(:post).permit(:item_name, {images: []})
   end
 
-  def comment_params
-    params.require(:comment).permit(:title, :user_id)
+  def post_params
+    params.require(:post).permit(:item_name, :item_description, :supplier_name, :supplier_description, :user_id, {images: []})
   end
 
 end

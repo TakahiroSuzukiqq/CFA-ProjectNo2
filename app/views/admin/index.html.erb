@@ -4,7 +4,8 @@
 
 <% @suppliers.reverse.each do |supplier| %>
     Supplier name : <%= supplier.supplier_name %><br>
-    <!-- Resistered email: <%= supplier.email %><br> -->
+    Resistered email: <%= supplier.email %><br>
+    Supplier id : <%= supplier.user.email %><br>
     Supplier phone number : <%= supplier.supplier_phone_number %><br>
     Supplier company number : <%= supplier.company_number %><br>
     Verified : <%= supplier.verified %><br>
@@ -20,6 +21,20 @@
     <br>
     <br>
   </tr>
+<% end %>
+
+<br>
+
+<% @posts.reverse.each do |post| %>
+    Item name :<%= post.item_name %><br>
+    Item description :<%= post.item_description %><br>
+    Supplier name :<%= post.supplier_name %><br>
+    Supplier description :<%= post.supplier_description %><br>
+    User id :<%= post.user.email %><br>
+   <%= link_to 'Show', post %> |
+   <%= link_to 'Edit', edit_post_path(post) %> |
+   <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+   <br>
 <% end %>
 
 <br>

@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
-    @post = Post.images
+    # @post = Post.images
   end
 
   # GET /posts/1

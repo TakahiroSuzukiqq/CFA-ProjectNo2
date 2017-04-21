@@ -4,9 +4,9 @@
 
 <% if user_signed_in? %>
    <% @posts.reverse.each do |post| %>
-      <% @post.images.each do |image| %>
-         <img src ="<%= image %>" alt="Image">
-      <% end %>
+      <%# @post.images.each do |image| %>
+         <!-- <img src ="<%#= image %>" alt="Image"> -->
+      <!-- <#% end %> -->
       Item name :<%= post.item_name %><br>
       Item description :<%= post.item_description %><br>
       Supplier name :<%= post.supplier_name %><br>
@@ -36,8 +36,14 @@
 
 <br>
 <% if user_signed_in? %>
-  <%= link_to 'Toppage', root_path %>
+  <%= link_to 'Toppage', root_path %> |
 <% else %>
-  <%= link_to 'New Post', new_post_path %>
+  <%= link_to 'New Post', new_post_path %> |
   <%= link_to 'Toppage', root_path %>
+<% end %>
+
+<% if user_signed_in? %>
+  <% if current_user.has_role? :admin %>
+     <%= link_to 'New Post', new_post_path %>
+  <% end %>
 <% end %>

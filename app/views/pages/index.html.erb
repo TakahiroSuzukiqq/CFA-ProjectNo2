@@ -6,12 +6,23 @@
 </div>
 
 <% if user_signed_in? %>
+<!-- signedin -->
   <% if current_user.supplier.present? %>
+  <!-- present -->
+  <%#= current_user.supplier.inspect %>
     <% if current_user.supplier.verified %>
        <div class = "post-new-item">
          <%= link_to 'Post new item', posts_path %>
        </div>
     <% end %>
+  <% end %>
+<% end %>
+
+<% if user_signed_in? %>
+  <% if current_user.has_role? :admin %>
+     <div class = "post-new-item2">
+       <%= link_to 'Post new item', posts_path %>
+     </div>
   <% end %>
 <% end %>
 

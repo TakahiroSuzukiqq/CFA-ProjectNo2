@@ -42,6 +42,13 @@
             </li>
           <% end %>
         <% end %>
+        <li>
+          <% if user_signed_in? %>
+          <% if current_user.has_role? :admin %>
+            <%= link_to 'Addmin page', admin_index_path %>
+          <% end %>
+          <% end %>
+       </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
