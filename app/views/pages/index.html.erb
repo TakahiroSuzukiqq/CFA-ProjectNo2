@@ -83,13 +83,13 @@ display current 4 items or each of laetest products
         <!-- <img src ="<%#= image %>" alt="Image"> -->
 			<div class="caption">
 				<h4><%= post.item_name %><h4>
+        <br>
         <%= link_to "See more", post_path(post.id) %>
         <%= render 'partials/stripe', post: post %>
-        <br>
-        <div class="btn-group" data-toggle="buttons-checkbox">
+        <!-- <div class="btn-group" data-toggle="buttons-checkbox">
           <button type="button" class="btn btn-primary-see-more"><%= link_to "See more", post_path(post.id) %></button>
           <button type="button" class="btn btn-primary-purchase">Purchase</button>
-        </div>
+        </div> -->
 			</div>
 		</div>
 	</div>
