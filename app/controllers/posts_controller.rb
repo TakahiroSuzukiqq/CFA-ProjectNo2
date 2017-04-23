@@ -15,6 +15,8 @@ class PostsController < ApplicationController
   def show
     @comments = Comment.all
     @comments = @post.comments
+    @comment = Comment.new
+    @post = Post.find(params[:id])
   end
 
   # GET /posts/new

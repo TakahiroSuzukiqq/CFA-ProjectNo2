@@ -12,7 +12,7 @@ class PostPolicy < ApplicationPolicy
   end
 
   def permitted_attributes
-    [:item_name, :item_description, :supplier_name, :supplier_description, :user_id, {images: []}, :user_name, :title, :content]
+    [:item_name, :item_description, :supplier_name, :supplier_description, :user_id, {images: []}, :user_name, :title, :content, :comment]
   end
 
   class Scope < Scope
