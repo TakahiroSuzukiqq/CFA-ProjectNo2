@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170421121411) do
+ActiveRecord::Schema.define(version: 20170423040907) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20170421121411) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "images"
     t.index ["email"], name: "index_pages_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_pages_on_reset_password_token", unique: true, using: :btree
   end
@@ -86,21 +87,6 @@ ActiveRecord::Schema.define(version: 20170421121411) do
     t.index ["user_id"], name: "index_suppliers_on_user_id", using: :btree
   end
 
-  create_table "toppages", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "supplier_id"
-    t.integer  "post_id"
-    t.string   "user_name"
-    t.string   "supplier_name"
-    t.string   "images"
-    t.string   "item_name"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.index ["post_id"], name: "index_toppages_on_post_id", using: :btree
-    t.index ["supplier_id"], name: "index_toppages_on_supplier_id", using: :btree
-    t.index ["user_id"], name: "index_toppages_on_user_id", using: :btree
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",       null: false
     t.string   "encrypted_password",     default: "",       null: false
@@ -136,8 +122,5 @@ ActiveRecord::Schema.define(version: 20170421121411) do
   add_foreign_key "posts", "users"
   add_foreign_key "suppliers", "suppliers"
   add_foreign_key "suppliers", "users"
-  add_foreign_key "toppages", "posts"
-  add_foreign_key "toppages", "suppliers"
-  add_foreign_key "toppages", "users"
   add_foreign_key "users", "suppliers"
 end
