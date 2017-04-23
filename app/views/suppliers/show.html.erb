@@ -30,7 +30,7 @@
 <% if user_signed_in? %>
   <% if current_user.has_role? :admin %>
      <%= link_to 'Admin index', admin_index_path %> |
-     <%= link_to 'Toppage',  root_path %>
+     <%= link_to 'Top page',  root_path %>
   <% else%>
      <%= link_to 'Back', suppliers_path %> |
      <%= link_to 'Toppage',  root_path %>
