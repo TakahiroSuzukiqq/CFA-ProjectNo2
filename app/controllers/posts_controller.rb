@@ -48,6 +48,7 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
+    #authorize @post
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
@@ -81,6 +82,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:item_name, :item_description, :supplier_name, :supplier_description, :user_id, {images: []}, :user_name, :title, :content)
+      params.require(:post).permit(policy(@post).permitted_attributes)
     end
 end
