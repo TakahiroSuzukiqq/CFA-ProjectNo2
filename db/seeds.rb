@@ -8,3 +8,5 @@
 
 user1 = User.create!(email: 'admin@email.com', password: '111111')
 user1.add_role :admin
+user1.add_type :admin
+user1.save

@@ -17,7 +17,8 @@ class AdminController < ApplicationController
     private
 
   def authorize_user
-    if current_user.has_role? :admin
+    if current_user.user_type != 'admin'
+    # if current_user.has_role? :admin
       redirect_to root_path, notice: 'Login as User'
     end
   end
