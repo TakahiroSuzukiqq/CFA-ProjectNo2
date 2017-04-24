@@ -2,6 +2,17 @@
 
 <h1>All Items</h1>
 
+<%= search_form_for @q do |f| %>
+  <div class="field">
+    <%= f.label :search%>
+    <%= f.text_field :item_name_or_item_description_or_supplier_name_or_supplier_description_cont %>
+  </div>
+
+  <div class="field">
+    <%= f.submit %>
+  </div>
+<% end %>
+
 <% if user_signed_in? %>
    <% @posts.reverse.each do |post| %>
       <% post.images.each do |image| %>

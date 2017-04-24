@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @message.user.email %>
+  <strong>Poster:</strong>
+  <%= @message.user %>
 </p>
 
 <p>
@@ -16,4 +16,5 @@
 </p>
 
 <%= link_to 'Edit', edit_message_path(@message) %> |
-<%= link_to 'Back', messages_path %>
+<%= link_to 'Back', messages_path %> |
+<%= link_to 'Top page', root_path %>

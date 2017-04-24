@@ -7,8 +7,11 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
-    # @post = Post.images
+    @q = Post.ransack(params[:q])
+    @posts = @q.result    #(distinct: true)
   end
+
+
 
   # GET /posts/1
   # GET /posts/1.json
@@ -84,6 +87,7 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:item_name, :item_description, :supplier_name, :supplier_description, :user_id, {images: []}, :user_name, :title, :content, :comment)
+      #params.require(:post).permit(:item_name, :item_description, :supplier_name, :supplier_description, :user_id, {images: []}, :user_name, :title, :content, :comment)
+      params.require(:post).permit(policy(@post).permitted_attributes
     end
 end

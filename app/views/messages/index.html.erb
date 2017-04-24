@@ -3,7 +3,7 @@
 <h1>Messages</h1>
 <br>
     <% @messages.each do |message| %>
-        <strong>User:</strong>
+        <strong>Poster:</strong>
           <%= message.user %><br>
         <strong>Title:</strong>
           <%= message.title %><br>
@@ -18,4 +18,5 @@
 
 <br>
 
-<%= link_to 'New Message', new_message_path %>
+<%= link_to 'New Message', new_message_path %> |
+<%= link_to 'Top page', root_path %>
