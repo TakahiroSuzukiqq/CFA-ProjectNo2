@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   devise_for :users
-  get "admin/index", to: "admin#index"
+  get "admin/index"
   root "pages#index"
   get "contact", to: "contact#index"
   post "contact", to: "contact#mail"
