@@ -5,72 +5,6 @@
    <h1>Welcome to Fairtrade page</h1>
 </div>
 
-<% if user_signed_in? %>
-<!-- signedin -->
-  <% if current_user.supplier.present? %>
-  <!-- present -->
-  <%#= current_user.supplier.inspect %>
-    <% if current_user.supplier.verified %>
-       <div class = "post-new-item">
-         <%= link_to 'Post new item', posts_path %>
-       </div>
-    <% end %>
-  <% end %>
-<% end %>
-
-<% if user_signed_in? %>
-  <% if current_user.has_role? :admin %>
-     <div class = "post-new-item2">
-       <%= link_to 'Post new item', posts_path %>
-     </div>
-  <% end %>
-<% end %>
-<!--
-<div class = "container-fluid-toppage" >
-   <div class="row">
-   	<div class="col-md-6">
-   		<div class="thumbnail">
-   			<img src="https://images.pexels.com/photos/95425/pexels-photo-95425.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb">
-   			<div class="caption">
-   				<h4>What is fairtrade<h4>
-           <br>
-   			</div>
-   		</div>
-   	</div>
-    <div class="col-md-6">
-   		<div class="thumbnail">
-   			<img src="https://images.pexels.com/photos/75652/boards-glasses-smartphone-phone-75652.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb">
-   			<div class="caption">
-   				<h4>Market<h4>
-          <% link_to "Post items as Supplier", posts_path %><button type="button" class="btn btn-primary" data-toggle="button"></button>
-           <br>
-   			</div>
-   		</div>
-   	</div>
-   </div>
-</div>
-
-<div class = "container-fluid-toppage2" >
-   <div class="col-md-6">
-     <div class="thumbnail">
-       <img src="http://img11.deviantart.net/a5f8/i/2012/267/5/6/corkboard_act1_by_infinityunbound-d5fro0i.png">
-       <div class="caption">
-         <h4>Corkboard<h4>
-          <br>
-       </div>
-     </div>
-   </div>
-   <div class="row">
-   	<div class="col-md-6">
-   		<div class="thumbnail">
-   			<img src="https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb">
-   			<div class="caption">
-   				<h4>Inquiry and Contact<h4>
-           <br>
-   			</div>
-   		</div>
-   	</div> -->
-
    </div>
 </div>
 
@@ -80,11 +14,13 @@
 <% @posts.reverse[0..3].each do |post| %>
 	<div class="col-xs-6 col-md-3">
 		<div class="thumbnail">
-        <!-- <img src ="<%#= image %>" alt="Image"> -->
+          <img src ="<%= @post.images %>" alt="Image">
+        <%= @post.inspect %>
 			<div class="caption">
 				<h4><%= post.item_name %><h4>
         <br>
         <%= link_to "See more", post_path(post.id) %>
+        <br><br>
         <%= render 'partials/stripe', post: post %>
         <!-- <div class="btn-group" data-toggle="buttons-checkbox">
           <button type="button" class="btn btn-primary-see-more"><%= link_to "See more", post_path(post.id) %></button>
@@ -95,3 +31,74 @@
 	</div>
     <% end %>
 </div>
+<!--
+<div class="container">
+  <div class="row">
+    <h2>Pinterest Responsive Grid</h2>
+
+    <p>Best viewed <a href="http://bootsnipp.com/iframe/Zkk0O" target="_blank">full screen</a>
+    </p>
+    <hr>
+    <section id="pinBoot">
+
+      <article class="white-panel"><img src="http://i.imgur.com/sDLIAZD.png" alt="">
+        <h4><a href="#">Title 1</a></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article>
+
+      <article class="white-panel"> <img src="http://i.imgur.com/8lhFhc1.gif" alt="">
+        <h4><a href="#">Title 2</a></h4>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article>
+
+      <article class="white-panel"> <img src="http://i.imgur.com/xOIMvAe.jpg" alt="">
+        <h4><a href="#">Title 3</a></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </article>
+
+
+      <article class="white-panel"> <img src="http://i.imgur.com/3gXW3L3.jpg" alt="">
+        <h4><a href="#">Title 4</a></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article>
+
+      <article class="white-panel"> <img src="http://i.imgur.com/o2RVMqm.jpg" alt="">
+        <h4><a href="#">Title 5</a></h4>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article>
+
+      <article class="white-panel"> <img src="http://i.imgur.com/kFFpuKA.jpg" alt="">
+        <h4><a href="#">Title 6</a></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </article>
+
+
+
+      <article class="white-panel"><img src="http://i.imgur.com/E9RmLPA.jpg" alt="">
+        <h4><a href="#">Title 7</a></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article>
+
+      <article class="white-panel"> <img src="http://i.imgur.com/8lhFhc1.gif" alt="">
+        <h4><a href="#">Title 8</a></h4>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article>
+
+    </section>
+
+
+    <hr>
+
+
+  </div>
+  <p>
+    <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fbootsnipp.com%2Fiframe%2FZkk0O" target="_blank"><small>HTML</small><sup>5</sup></a>
+    <br>
+    <br>
+
+  </p> -->
