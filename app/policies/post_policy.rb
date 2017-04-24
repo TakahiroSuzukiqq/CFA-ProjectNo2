@@ -7,7 +7,7 @@ class PostPolicy < ApplicationPolicy
   end
 
   def update?
-    # require 'pry'; binding.pry
+     #require 'pry'; binding.pry
     @record.user == @user
   end
 

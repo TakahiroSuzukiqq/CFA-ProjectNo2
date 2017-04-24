@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :messages
   resources :charges
   resources :suppliers
   resources :posts do
