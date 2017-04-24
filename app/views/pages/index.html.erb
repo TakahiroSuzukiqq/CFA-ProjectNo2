@@ -14,8 +14,10 @@
 <% @posts.reverse[0..3].each do |post| %>
 	<div class="col-xs-6 col-md-3">
 		<div class="thumbnail">
-          <img src ="<%= @post.images %>" alt="Image">
-        <%= @post.inspect %>
+      <% post.images.each do |image| %>
+          <img src ="<%= image %>" alt="Image">
+        <% end %>
+        <%= post.inspect %>
 			<div class="caption">
 				<h4><%= post.item_name %><h4>
         <br>
