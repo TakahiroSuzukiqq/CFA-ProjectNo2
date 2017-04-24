@@ -16,10 +16,10 @@ class CommentPolicy < ApplicationPolicy
       [:user_id, :title, :content, :post_id, :user_name, {images: []}]
     end
 
-    class Scope < Scope
-      def resolve
-        scope
-      end
-    end
+    # class Scope < Scope
+    #   def resolve
+    #     scope
+    #   end
+    # end
 
 end

@@ -13,4 +13,8 @@ class User < ApplicationRecord
   has_many :comments
   has_one :supplier
 
+  # def admin?
+  #   has_role?(:admin)
+  # end
+
 end

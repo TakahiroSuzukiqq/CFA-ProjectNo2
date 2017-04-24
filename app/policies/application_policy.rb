@@ -43,6 +43,7 @@ class ApplicationPolicy
 
     def initialize(user, scope)
       @user = user
+      @supplier = supplier
       @scope = scope
     end
 
