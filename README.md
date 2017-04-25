@@ -4,7 +4,7 @@
 
 
 
-1. Project
+
 # About the Project
 
 In 2012, according to ILO (International Labour Organization), there are 168 million children who aged between 5 to 17 work as a child labor.
@@ -32,11 +32,11 @@ And I'm also aiming at making international platform which supplyer and buyer or
 
 
 
-2. Design jurney
+
 
 # Thinking process    aglie and cost estimation
 To realize my idea, I started from brain storming with using Trello that what function will be needed for suppling people and peole who want to buy items.
-  
+
 
       #picture of trello
 
@@ -47,7 +47,7 @@ Then I tackled with my basic web page and also tried to think about each Model a
       #picture of excell
 
 
-3. Core function
+# Core function
 Main core function is that users can see items posted by suppliers. And the User can be the Supplier via registration.
 Once Admin account give users a permission they can post items as Supplier.
 So Admin can grasp suppliers' information and users can buy items from authenticated supplier.
@@ -58,14 +58,16 @@ So Admin can grasp suppliers' information and users can buy items from authentic
 
 
 
-4. Challenges
+# Challenges
 *Admin verification,
 *Image display
 *Each relation, database, I had to add and change db many times.
 *API
 
-5. Gems
+
+
+# Gems
 
 
 
-6. Install and migration process
+# Install and migration process

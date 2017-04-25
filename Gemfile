@@ -17,7 +17,7 @@ gem 'ransack'
 gem 'mini_magick'
 gem 'rspec-rails', '~> 3.5'
 gem 'rails-controller-testing'
-
+gem 'omniauth-facebook'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
