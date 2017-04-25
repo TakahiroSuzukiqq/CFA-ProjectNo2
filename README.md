@@ -1,9 +1,11 @@
 <p align="center">
-<% image_tag 'githublogofe.png' width="600">
+<%= image_tag 'githublogofe.png' width="600">
 </p>
 
 
+1. Project
 # About the Project
+
 In 2012, according to ILO (International Labour Organization), there are 168 million children who aged between 5 to 17 work as a child labor.
 And Asia and the Pacific has the largest numbers (almost 78 million or 9.3% of child population).
 One of the reason children are engaged in working at thier early age is that they and thier parents are suffuring from poverty.
@@ -29,27 +31,41 @@ And I'm also aiming at making international platform which supplyer and buyer or
 
 
 
-# README
+2. Design jurney
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Thinking process    aglie and cost estimation
+To realize my idea, I started from brain storming with using Trello that what function will be needed for suppling people and peole who want to buy items.
 
-Things you may want to cover:
 
-* Ruby version
+      #picture of trello
 
-* System dependencies
+# Design process
+Then I tackled with my basic web page and also tried to think about each Model and thier relation with using the method called ERD (Entity-relationship Diagram)
 
-* Configuration
+      #picture of idea paper
+      #picture of excell
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+3. Core function
+Main core function is that users can see items posted by suppliers. And the User can be the Supplier via registration.
+Once Admin account give users a permission they can post items as Supplier.
+So Admin can grasp suppliers' information and users can buy items from authenticated supplier.
 
-* Services (job queues, cache servers, search engines, etc.)
+      #picture of index
+      #picture of adamin verify
+      #picture of post-comment       
 
-* Deployment instructions
 
-* ...
+
+4. Challenges
+*Admin verification,
+*Image display
+*Each relation, database, I had to add and change db many times.
+
+
+5. Gems
+
+
+
+6. Install and migration process
