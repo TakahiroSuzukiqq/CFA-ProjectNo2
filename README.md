@@ -37,14 +37,13 @@ And I'm also aiming at making international platform which supplyer and buyer or
 # Thinking process    aglie and cost estimation
 To realize my idea, I started from brain storming with using Trello that what function will be needed for suppling people and peole who want to buy items.  
 
-      
-<img src="https://image.ibb.co/gUmgmQ/2017_04_26_2.png" alt="2017 04 26 2" border="0" />  
-      </p>
+
+<img src="https://image.ibb.co/gUmgmQ/2017_04_26_2.png" alt="2017 04 26 2" border="0" />
 
 # Design process
 Then I tackled with my basic web page and also tried to think about each Model and thier relation with using the method called ERD (Entity-relationship Diagram)  
       <p align="center">
-<img src="https://image.ibb.co/d5yNt5/2017_04_26_07_32_35.png" alt="2017 04 26 07 32 35" border="0" />  
+<img src="https://image.ibb.co/d5yNt5/2017_04_26_07_32_35.png" alt="2017 04 26 07 32 35" border="0" />
       </p>
 
       <p align="center">
@@ -67,7 +66,9 @@ Main core function is that
 4.User can leave cocmment to a each item.
 5.Suppler and User can post event or any message via Message board to communicate with each other.
 
-
+<p align="center">
+<img src="https://image.ibb.co/hFEj6Q/2017_04_26_4.png" alt="2017 04 26 4" border="0" />
+</p>
 
 # Challenges
 1.Admin verification,  
