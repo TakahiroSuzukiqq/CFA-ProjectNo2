@@ -1,6 +1,7 @@
 <p align="center">
-<img src="https://ibb.co/i4xCAk" width="600" />
+<img src="https://image.ibb.co/fNvzqk/githublogofe.png" width="600" />
 </p>
+
 
 
 1. Project
@@ -36,7 +37,9 @@ And I'm also aiming at making international platform which supplyer and buyer or
 # Thinking process    aglie and cost estimation
 To realize my idea, I started from brain storming with using Trello that what function will be needed for suppling people and peole who want to buy items.
 
-
+<p>
+<img src="https://image.ibb.co/fNvzqk/githublogofe.png" alt="githublogofe" border="0">
+</p>
       #picture of trello
 
 # Design process
@@ -44,7 +47,7 @@ Then I tackled with my basic web page and also tried to think about each Model a
 
       #picture of idea paper
       #picture of excell
-
+<a href="https://ibb.co/i4xCAk"><img src="https://image.ibb.co/fNvzqk/githublogofe.png" alt="githublogofe" border="0"></a>
 
 
 3. Core function
@@ -55,8 +58,9 @@ So Admin can grasp suppliers' information and users can buy items from authentic
       #picture of index
       #picture of adamin verify
       #picture of post-comment       
-
-
+<p>
+<a href="https://ibb.co/i4xCAk"><img src="https://image.ibb.co/fNvzqk/githublogofe.png" alt="githublogofe" border="0"></a>
+</p>
 
 4. Challenges
 *Admin verification,
@@ -65,7 +69,7 @@ So Admin can grasp suppliers' information and users can buy items from authentic
 *API
 
 5. Gems
-
+[img]https://image.ibb.co/fNvzqk/githublogofe.png[/img]
 
 
 6. Install and migration process
