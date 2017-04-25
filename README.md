@@ -35,27 +35,27 @@ And I'm also aiming at making international platform which supplyer and buyer or
 
 
 # Thinking process    aglie and cost estimation
-To realize my idea, I started from brain storming with using Trello that what function will be needed for suppling people and peole who want to buy items.
+To realize my idea, I started from brain storming with using Trello that what function will be needed for suppling people and peole who want to buy items.  
 
        <p align="center">
-      <img src="https://image.ibb.co/gUmgmQ/2017_04_26_2.png" >
+<img src="https://image.ibb.co/gUmgmQ/2017_04_26_2.png" alt="2017 04 26 2" border="0" />  
       </p>
 
 # Design process
-Then I tackled with my basic web page and also tried to think about each Model and thier relation with using the method called ERD (Entity-relationship Diagram)
+Then I tackled with my basic web page and also tried to think about each Model and thier relation with using the method called ERD (Entity-relationship Diagram)  
       <p align="center">
-      <img src="https://image.ibb.co/d5yNt5/2017_04_26_07_32_35.png">
+<img src="https://image.ibb.co/d5yNt5/2017_04_26_07_32_35.png" alt="2017 04 26 07 32 35" border="0" />  
       </p>
 
       <p align="center">
-      <img src="https://image.ibb.co/fvmLfk/plan2.jpg" >
+<img src="https://image.ibb.co/fvmLfk/plan2.jpg" alt="plan2" border="0" />  
       </p>
 
       <p align="center">
-      <img src="https://image.ibb.co/dM2nRQ/2017_04_26_1.png" >
+<img src="https://image.ibb.co/dM2nRQ/2017_04_26_1.png" alt="2017 04 26 1" border="0" />  
       </p>
       <p align="center">
-      <img src="https://image.ibb.co/dpcMmQ/2017_04_26.png" >
+<img src="https://image.ibb.co/dpcMmQ/2017_04_26.png" alt="2017 04 26" border="0" />  
       </p>
 
 
@@ -70,35 +70,35 @@ Main core function is that
 
 
 # Challenges
-1.Admin verification,
-2.Image display
-3.Each relation, database, I had to add and change db many times.
-4.API Install
+1.Admin verification,  
+2.Image display  
+3.Each relation, database, I had to add and change db many times.  
+4.API Install  
 
 
 
 # Gems
-gem 'devise'
-gem 'bootstrap-sass', '~> 3.3.6'
-gem 'carrierwave', '~> 1.0'
-gem "rolify"
-gem "pundit"
-gem 'stripe'
-gem 'simple_form'
-gem 'pry'
-gem 'ransack'
-gem 'mini_magick'
-gem 'rspec-rails', '~> 3.5'
-gem 'rails-controller-testing'
-gem 'omniauth-facebook'
+gem 'devise'  
+gem 'bootstrap-sass', '~> 3.3.6'  
+gem 'carrierwave', '~> 1.0'  
+gem "rolify"  
+gem "pundit"  
+gem 'stripe'  
+gem 'simple_form'  
+gem 'pry'  
+gem 'ransack'  
+gem 'mini_magick'  
+gem 'rspec-rails', '~> 3.5'  
+gem 'rails-controller-testing'  
+gem 'omniauth-facebook'  
 
 
 # Install process
-1.Devise install and user model create, index page create
-2.Making scaffold of the application with creating models (post, comment, supplier, comment, message)
-3.Image uploader install
-4.User type, role add
-5.Payment function install
-6.Mailing function install
-7.Tesing
-8.API install
+1.Devise install and user model create, index page create  
+2.Making scaffold of the application with creating models (post, comment, supplier, comment, message)  
+3.Image uploader install  
+4.User type, role add  
+5.Payment function install  
+6.Mailing function install  
+7.Tesing  
+8.API install  
