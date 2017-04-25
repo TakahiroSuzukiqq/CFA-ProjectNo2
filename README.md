@@ -37,37 +37,68 @@ And I'm also aiming at making international platform which supplyer and buyer or
 # Thinking process    aglie and cost estimation
 To realize my idea, I started from brain storming with using Trello that what function will be needed for suppling people and peole who want to buy items.
 
-
-      #picture of trello
+       <p align="center">
+      <img src="https://image.ibb.co/gUmgmQ/2017_04_26_2.png" >
+      </p>
 
 # Design process
 Then I tackled with my basic web page and also tried to think about each Model and thier relation with using the method called ERD (Entity-relationship Diagram)
+      <p align="center">
+      <img src="https://image.ibb.co/d5yNt5/2017_04_26_07_32_35.png">
+      </p>
 
-      #picture of idea paper
-      #picture of excell
+      <p align="center">
+      <img src="https://image.ibb.co/fvmLfk/plan2.jpg" >
+      </p>
+
+      <p align="center">
+      <img src="https://image.ibb.co/dM2nRQ/2017_04_26_1.png" >
+      </p>
+      <p align="center">
+      <img src="https://image.ibb.co/dpcMmQ/2017_04_26.png" >
+      </p>
 
 
 # Core function
-Main core function is that users can see items posted by suppliers. And the User can be the Supplier via registration.
-Once Admin account give users a permission they can post items as Supplier.
-So Admin can grasp suppliers' information and users can buy items from authenticated supplier.
-
-      #picture of index
-      #picture of adamin verify
-      #picture of post-comment       
+Main core function is that
+1.users can see items posted by suppliers. And the User can be the Supplier via registration.
+2.Once Admin account give users a permission they can post items as Supplier.
+3.So Admin can grasp suppliers' information and users can buy items from authenticated supplier.
+4.User can leave cocmment to a each item.
+5.Suppler and User can post event or any message via Message board to communicate with each other.
 
 
 
 # Challenges
-*Admin verification,
-*Image display
-*Each relation, database, I had to add and change db many times.
-*API
+1.Admin verification,
+2.Image display
+3.Each relation, database, I had to add and change db many times.
+4.API Install
 
 
 
 # Gems
+gem 'devise'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'carrierwave', '~> 1.0'
+gem "rolify"
+gem "pundit"
+gem 'stripe'
+gem 'simple_form'
+gem 'pry'
+gem 'ransack'
+gem 'mini_magick'
+gem 'rspec-rails', '~> 3.5'
+gem 'rails-controller-testing'
+gem 'omniauth-facebook'
 
 
-
-# Install and migration process
+# Install process
+1.Devise install and user model create, index page create
+2.Making scaffold of the application with creating models (post, comment, supplier, comment, message)
+3.Image uploader install
+4.User type, role add
+5.Payment function install
+6.Mailing function install
+7.Tesing
+8.API install
