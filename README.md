@@ -70,6 +70,10 @@ Main core function is that
 <img src="https://image.ibb.co/hFEj6Q/2017_04_26_4.png" alt="2017 04 26 4" border="0" />
 </p>
 
+<p align="center">
+<img src="https://image.ibb.co/cPo5D5/2017_04_26_6.png" alt="2017_04_26_6" border="0">
+</p>
+
 # Challenges
 1.Admin verification,  
 2.Image display  
