@@ -8,3 +8,8 @@
 
 user1 = User.create!(email: 'admin@email.com', password: '111111')
 user1.add_role :admin
+
+user2 = User.create!(email: 'user1@email.com', password: '111111')
+user3 = User.create!(email: 'user2@email.com', password: '111111')
+user4 = User.create!(email: 'supplier1@email.com', password: '111111')
+user2 = User.create!(email: 'supplier2@email.com', password: '111111')
