@@ -1,20 +1,51 @@
 <%= render 'partials/nav' %>
 <p id="notice"><%= notice %></p>
 
-<div class = "welcomeFairtrade">
-   <h1>Fair trade, Fair enough</h1>
+<div class = "fairtrade_fairenough">
+  <img src="https://image.ibb.co/fNvzqk/githublogofe.png" width="600" />
 </div>
    <!-- </div>
 </div> -->
 
-<div class="Media-box1">
-  <img class="Media-figure-box1" src="https://images.pexels.com/photos/13918/pexels-photo-13918.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="">
-  <p class="Media-body-box1">Fairtrade</p>
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail-1">
+      <img src="https://images.pexels.com/photos/2128/person-woman-sitting-old.jpg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="about-ft" height="300">
+      <div class="caption">
+        <h3>Poverty</h3>
+        <h4>900 million people living with USD 1.9/day</h4>
+        <h4>20 billion farmer are less paid</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail-2">
+      <img src="https://images.pexels.com/photos/13918/pexels-photo-13918.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="about-ft" height="300">
+      <div class="caption">
+        <h3>Fair trade</h3>
+        <h4>A fair treatment for farmers</h4>
+        <h4>Selling Items with fair price</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail-3">
+      <img src="https://images.pexels.com/photos/95425/pexels-photo-95425.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="about-ft" height="300">
+      <div class="caption">
+        <h3>Let's join</h3>
+        <h4>AUD 10 billion annual turnover in global</h4>
+        <h4>74 countries, 1.5 million people</h4>
+      </div>
+    </div>
+  </div>
 </div>
 
 
+<br>
+<br>
 
-<h2>New arrival</h2>
+<h2>New arrival ItemS</h2>
 <br>
 <div class="row">
 <% @posts.reverse[0..3].each do |post| %>
@@ -39,74 +70,3 @@
 	</div>
     <% end %>
 </div>
-<!--
-<div class="container">
-  <div class="row">
-    <h2>Pinterest Responsive Grid</h2>
-
-    <p>Best viewed <a href="http://bootsnipp.com/iframe/Zkk0O" target="_blank">full screen</a>
-    </p>
-    <hr>
-    <section id="pinBoot">
-
-      <article class="white-panel"><img src="http://i.imgur.com/sDLIAZD.png" alt="">
-        <h4><a href="#">Title 1</a></h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </article>
-
-      <article class="white-panel"> <img src="http://i.imgur.com/8lhFhc1.gif" alt="">
-        <h4><a href="#">Title 2</a></h4>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </article>
-
-      <article class="white-panel"> <img src="http://i.imgur.com/xOIMvAe.jpg" alt="">
-        <h4><a href="#">Title 3</a></h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      </article>
-
-
-      <article class="white-panel"> <img src="http://i.imgur.com/3gXW3L3.jpg" alt="">
-        <h4><a href="#">Title 4</a></h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </article>
-
-      <article class="white-panel"> <img src="http://i.imgur.com/o2RVMqm.jpg" alt="">
-        <h4><a href="#">Title 5</a></h4>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </article>
-
-      <article class="white-panel"> <img src="http://i.imgur.com/kFFpuKA.jpg" alt="">
-        <h4><a href="#">Title 6</a></h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      </article>
-
-
-
-      <article class="white-panel"><img src="http://i.imgur.com/E9RmLPA.jpg" alt="">
-        <h4><a href="#">Title 7</a></h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </article>
-
-      <article class="white-panel"> <img src="http://i.imgur.com/8lhFhc1.gif" alt="">
-        <h4><a href="#">Title 8</a></h4>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </article>
-
-    </section>
-
-
-    <hr>
-
-
-  </div>
-  <p>
-    <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fbootsnipp.com%2Fiframe%2FZkk0O" target="_blank"><small>HTML</small><sup>5</sup></a>
-    <br>
-    <br>
-
-  </p> -->

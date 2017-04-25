@@ -13,10 +13,11 @@
   </div>
 <% end %>
 
+
 <% if user_signed_in? %>
    <% @posts.reverse.each do |post| %>
       <% post.images.each do |image| %>
-         <img src ="<%= image %>" alt="Image">
+         <img src ="<%= image %>" alt="Image"><br>
        <% end %>
       Item name :<%= post.item_name %><br>
       Item description :<%= post.item_description %><br>
@@ -26,7 +27,7 @@
 <% else %>
    <% @posts.reverse.each do |post| %>
       <% post.images.each do |image| %>
-          <img src ="<%= image %>" alt="Image">
+          <img src ="<%= image %>" alt="Image"><br>
       <% end %>
        Item name :<%= post.item_name %><br>
        Item description :<%= post.item_description %><br>
@@ -42,6 +43,8 @@
     <br>
    <% end %>
 <% end %>
+
+
 
 <br>
 <% if user_signed_in? %>

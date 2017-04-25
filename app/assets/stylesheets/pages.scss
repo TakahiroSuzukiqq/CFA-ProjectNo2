@@ -7,23 +7,19 @@ Ref:
 Thanks to:
 http://www.jqueryscript.net/layout/Simple-jQuery-Plugin-To-Create-Pinterest-Style-Grid-Layout-Pinterest-Grid.html
 */
-.imagfairenoughlogo{height: 100px; width:30%;}
+.imagfairenoughlogo{height: 100px;
+                    width:30%;
+                  }
 
-.welcomeFairtrade{margin-bottom: 5em}
 
-.Media-box1 {
-  display: flex;
-  align-items: flex-start;
-  height: 200px;
-  width: 200px;
-  color: red;
+.fairtrade_fairenough{margin-bottom: 3em;
+                      display: block;
+                      margin: 0 auto;
+                      margin-left: 30%
 }
-.Media-figure-box1 {
-  margin-right: 1em;
-  height: 100px;
-  width: 100px;
-  color: blue;
-}
-.Media-body-box1 {
-  flex: 1;
-}
+
+// .thumbnail-1{height:200px; width:30%;}
+//
+// .thumbnail-2{height:200px; width:30%;}
+//
+// .thumbnail-3{height:200px; width:30%;}

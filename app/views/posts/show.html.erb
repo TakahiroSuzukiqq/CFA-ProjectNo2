@@ -54,8 +54,8 @@
 <% if user_signed_in? %>
    <%= link_to 'All Items', posts_path %> |
    <%= link_to 'Top page', root_path %> |
-   <%= link_to 'Post a comment', new_post_comment_path(@post.id) %> |
-   <%= link_to 'Edit Comment', edit_post_comment_path(@post.id) %>    <!--#current user's comment -->
+   <%= link_to 'Post a comment', new_post_comment_path(@post.id) %>
+   <%#= link_to 'Edit Comment', edit_post_comment_path(@post.id) %>    <!--#current user's comment -->
 <% else %>
    <%= link_to 'Edit Post', edit_post_path(@post.id[] ) %> |
    <%= link_to 'All Items', posts_path %> |
