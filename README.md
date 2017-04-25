@@ -1,5 +1,5 @@
 <p align="center">
-<%= image_tag 'githublogofe.png' width="600">
+<img src="https://ibb.co/i4xCAk.png" width="600" />
 </p>
 
 
@@ -62,7 +62,7 @@ So Admin can grasp suppliers' information and users can buy items from authentic
 *Admin verification,
 *Image display
 *Each relation, database, I had to add and change db many times.
-
+*API
 
 5. Gems
 
