@@ -37,7 +37,7 @@ And I'm also aiming at making international platform which supplyer and buyer or
 # Thinking process    aglie and cost estimation
 To realize my idea, I started from brain storming with using Trello that what function will be needed for suppling people and peole who want to buy items.  
 
-       <p align="center">
+      
 <img src="https://image.ibb.co/gUmgmQ/2017_04_26_2.png" alt="2017 04 26 2" border="0" />  
       </p>
 
