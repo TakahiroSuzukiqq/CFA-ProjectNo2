@@ -45,7 +45,11 @@ To realize my idea, I started from brain storming with using Trello that what fu
 Then I tackled with my basic web page and also tried to think about each Model and thier relation with using the method called ERD (Entity-relationship Diagram)   
 
       <p align="center">
-      <img src="https://image.ibb.co/fvmLfk/plan2.jpg" alt="plan2" border="0" />
+  <img src="https://image.ibb.co/cVeO1Q/plan2.jpg" alt="plan2" border="0">
+      </p>  
+
+      <p align="center">
+      <img src="https://image.ibb.co/d5yNt5/2017_04_26_07_32_35.png" alt="2017 04 26 07 32 35" border="0" />
       </p>  
 
       <p align="center">
@@ -53,9 +57,8 @@ Then I tackled with my basic web page and also tried to think about each Model a
       </p>  
 
       <p align="center">
-      <img src="https://image.ibb.co/dpcMmQ/2017_04_26.png" alt="2017 04 26" border="0" />
-      </p>  
-
+<img src="https://image.ibb.co/dpcMmQ/2017_04_26.png" alt="2017 04 26" border="0" />
+       </p>  
 
 # Core function  
 Main core function is that  
