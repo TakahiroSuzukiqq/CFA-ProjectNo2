@@ -15,7 +15,7 @@ In 2012 accoding to the World Bank, there estimated to be 900 million people who
 Its number is equal to more than 10% of world population.  
 
 So, why poverty causes?  
-  
+
 One of the reason is they cannot get enough earnings because of exploitation from intermediary or less paied from their emplyer.
 There estimated to be more than 2 billion people who are engaged in working as a farmer, and about 50% of people in Asia and African countries are working as a farmer.
 They are regarded as cheaper labour force and thus, their products lile coffee, cacao or cotton are not dealing with proper price.  
@@ -44,14 +44,14 @@ To realize my idea, I started from brain storming with using Trello that what fu
 # Design process  
 Then I tackled with my basic web page and also tried to think about each Model and thier relation with using the method called ERD (Entity-relationship Diagram)   
 
-      <p align="center">  
-        <img src="https://image.ibb.co/fvmLfk/plan2.jpg" alt="plan2" border="0" />  
+      <p align="center">
+        <img src="https://image.ibb.co/fvmLfk/plan2.jpg" alt="plan2" border="0" />
       </p>  
-      <p align="center">  
-        <img src="https://image.ibb.co/dM2nRQ/2017_04_26_1.png" alt="2017 04 26 1" border="0" />  
+      <p align="center">
+        <img src="https://image.ibb.co/dM2nRQ/2017_04_26_1.png" alt="2017 04 26 1" border="0" />
       </p>  
-      <p align="center">  
-        <img src="https://image.ibb.co/dpcMmQ/2017_04_26.png" alt="2017 04 26" border="0" />  
+      <p align="center">
+        <img src="https://image.ibb.co/dpcMmQ/2017_04_26.png" alt="2017 04 26" border="0" />
       </p>  
 
 
