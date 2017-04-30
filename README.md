@@ -74,10 +74,10 @@ Main core function is that
 
 
 
-# Gems  
+# Gems  (Please check each gems' latest version)
 gem 'devise'
-gem 'bootstrap-sass', '~> 3.3.6'  
-gem 'carrierwave', '~> 1.0'  
+gem 'bootstrap-sass' (e.g: ver.3.3.6)
+gem 'carrierwave'    (e.g: 1.0)
 gem "rolify"  
 gem "pundit"  
 gem 'stripe'  
@@ -85,7 +85,7 @@ gem 'simple_form'
 gem 'pry'  
 gem 'ransack'  
 gem 'mini_magick'  
-gem 'rspec-rails', '~> 3.5'  
+gem 'rspec-rails'    (e.g: 3.5)  
 gem 'rails-controller-testing'  
 gem 'omniauth-facebook'  
 
