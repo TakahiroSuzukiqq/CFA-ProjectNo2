@@ -47,17 +47,12 @@ Then I tackled with my basic web page and also tried to think about each Model a
 
   <img src="https://image.ibb.co/cVeO1Q/plan2.jpg" alt="plan2" border="0">
 
-      <p align="center">
-    <img src="https://image.ibb.co/d5yNt5/2017_04_26_07_32_35.png" alt="2017 04 26 07 32 35" border="0" />
-      </p>  
+<img src="https://image.ibb.co/d5yNt5/2017_04_26_07_32_35.png" alt="2017 04 26 07 32 35" border="0" />
 
-      <p align="center">
-      <img src="https://image.ibb.co/dM2nRQ/2017_04_26_1.png" alt="2017 04 26 1" border="0" />
-      </p>  
+  <img src="https://preview.ibb.co/iiNXt5/2017_04_26_1.png" alt="2017 04 26 1" border="0" />
 
-      <p align="center">
 <img src="https://image.ibb.co/dpcMmQ/2017_04_26.png" alt="2017 04 26" border="0" />
-       </p>  
+
 
 # Core function  
 Main core function is that  
