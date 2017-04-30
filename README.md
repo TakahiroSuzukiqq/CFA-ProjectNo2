@@ -75,9 +75,9 @@ Main core function is that
 
 
 # Gems  (Please check each gems' latest version)
-gem 'devise'
-gem 'bootstrap-sass' (e.g: ver.3.3.6)
-gem 'carrierwave'    (e.g: 1.0)
+gem 'devise'  
+gem 'bootstrap-sass' (e.g: ver.3.3.6)  
+gem 'carrierwave'    (e.g: 1.0)  
 gem "rolify"  
 gem "pundit"  
 gem 'stripe'  
