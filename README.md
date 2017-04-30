@@ -45,13 +45,15 @@ To realize my idea, I started from brain storming with using Trello that what fu
 Then I tackled with my basic web page and also tried to think about each Model and thier relation with using the method called ERD (Entity-relationship Diagram)   
 
       <p align="center">
-        <img src="https://image.ibb.co/fvmLfk/plan2.jpg" alt="plan2" border="0" />
+      <img src="https://image.ibb.co/fvmLfk/plan2.jpg" alt="plan2" border="0" />
       </p>  
+
       <p align="center">
-        <img src="https://image.ibb.co/dM2nRQ/2017_04_26_1.png" alt="2017 04 26 1" border="0" />
+      <img src="https://image.ibb.co/dM2nRQ/2017_04_26_1.png" alt="2017 04 26 1" border="0" />
       </p>  
+
       <p align="center">
-        <img src="https://image.ibb.co/dpcMmQ/2017_04_26.png" alt="2017 04 26" border="0" />
+      <img src="https://image.ibb.co/dpcMmQ/2017_04_26.png" alt="2017 04 26" border="0" />
       </p>  
 
 
