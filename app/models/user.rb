@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_many :posts
   has_many :comments
   has_one :supplier
+  has_many :messages
 
   # def admin?
   #   has_role?(:admin)
