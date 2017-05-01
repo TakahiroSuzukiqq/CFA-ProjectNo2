@@ -87,7 +87,8 @@ gem 'ransack'
 gem 'mini_magick'  
 gem 'rspec-rails'    (e.g: 3.5)  
 gem 'rails-controller-testing'  
-gem 'omniauth-facebook'  
+gem 'omniauth-facebook'    
+gem 'fog'            (e.g: 1.38)
 
 
 # Install process  
