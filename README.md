@@ -66,6 +66,12 @@ Main core function is that
   <img src="https://image.ibb.co/cPo5D5/2017_04_26_6.png" alt="2017_04_26_6" border="0">  
 </p>  
 
+# How to play  
+1.Log in with your facebook acoount or make a new account.
+2.If you want to post items as Supplier, click "Register as Supplier" as register.  
+3.You can verify registered supplier with admin account (email: admin@email.com, password: 111111).  
+
+
 # Challenges  
 1.Admin verification    
 2.Image display  
