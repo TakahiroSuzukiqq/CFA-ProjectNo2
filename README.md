@@ -5,8 +5,21 @@
 
 
 
-# About the Project
-
+# Overview  
+ * [About the Project](#section1)      
+ * [Thinking process](#section2)    
+ * [Design process](#section3)    
+ * [Core function](#section4)    
+ * [How to play](#section5)     
+ * [Challenges](#section6)    
+ * [Gems](#section7)  
+ * [Install process](#section8)  
+ * [Future plan](#section9)  
+ * [Memo](#section10)  
+        
+        
+# <a name="section1"> About the Project    
+  
 In 2012, according to ILO (International Labour Organization), there are 168 million children who aged between 5 to 17 work as a child labor.
 And Asia and the Pacific has the largest numbers (almost 78 million or 9.3% of child population).
 One of the reason children are engaged in working at thier early age is that they and thier parents are suffuring from poverty.
@@ -35,13 +48,15 @@ And I'm also aiming at making international platform which supplyer and buyer or
 
 
 
-# Thinking process  
+# <a name="section2"> Thinking process    
 To realize my idea, I started from brain storming with using Trello that what function will be needed for suppling people and peole who want to buy items.   
 
 
 <img src="https://image.ibb.co/gUmgmQ/2017_04_26_2.png" alt="2017 04 26 2" border="0" />  
+  
+    
 
-# Design process  
+# <a name="section3"> Design process    
 Then I tackled with my basic web page and also tried to think about each Model and thier relation with using the method called ERD (Entity-relationship Diagram)   
 
 
@@ -50,7 +65,7 @@ Then I tackled with my basic web page and also tried to think about each Model a
   <img src="https://image.ibb.co/dM2nRQ/2017_04_26_1.png" alt="2017 04 26 1" border="0" />  
 <img src="https://image.ibb.co/mqYi1Q/ERD.png" alt="ERD" border="0">
 
-# Core function  
+# <a name="section4"> Core function    
 Main core function is that  
 1.users can see items posted by suppliers. And the User can be the Supplier via registration.  
 2.Once Admin account give users a permission they can post items as Supplier.  
@@ -66,13 +81,13 @@ Main core function is that
   <img src="https://image.ibb.co/cPo5D5/2017_04_26_6.png" alt="2017_04_26_6" border="0">  
 </p>  
 
-# How to play  
+# <a name="section5"> How to play    
 1.Log in with your facebook acoount or make a new account.
 2.If you want to post items as Supplier, click "Register as Supplier" as register.  
 3.You can verify registered supplier with admin account (email: admin@email.com, password: 111111).  
 
 
-# Challenges  
+# <a name="section6"> Challenges    
 1.Admin verification    
 2.Image display  
 3.Each relation, database, I had to add and change db many times   
@@ -80,24 +95,26 @@ Main core function is that
 
 
 
-# Gems  (Please check each gems' latest version)
-gem 'devise'  
-gem 'bootstrap-sass' (e.g: ver.3.3.6)  
-gem 'carrierwave'    (e.g: 1.0)  
-gem "rolify"  
-gem "pundit"  
-gem 'stripe'  
-gem 'simple_form'  
-gem 'pry'  
-gem 'ransack'  
-gem 'mini_magick'  
-gem 'rspec-rails'    (e.g: 3.5)  
-gem 'rails-controller-testing'  
-gem 'omniauth-facebook'    
-gem 'fog'            (e.g: 1.38)
-
-
-# Install process  
+# <a name="section7"> Gems  (Please check each gems' latest version)    
+````    
+gem 'devise'    
+gem 'bootstrap-sass', '~> 3.3.6'    
+gem 'carrierwave', '~> 1.0'    
+gem "rolify"    
+gem "pundit"    
+gem 'stripe'    
+gem 'simple_form'    
+gem 'pry'    
+gem 'ransack'    
+gem 'mini_magick'    
+gem 'rspec-rails', '~> 3.5'    
+gem 'rails-controller-testing'    
+gem 'omniauth-facebook'      
+gem 'fog', '~> 1.38'    
+````    
+  
+  
+# <a name="section8"> Install process    
 1.Devise install and user model create, index page create  
 2.Making scaffold of the application with creating models (post, comment, supplier, comment, message)  
 3.Image uploader install  
@@ -108,8 +125,15 @@ gem 'fog'            (e.g: 1.38)
 8.API install  
 
 
-# Future plan  
+# <a name="section9"> Future plan    
 1.Increasing products (e.g. Cacao, Tea, Banana, Cotton)  
 2.Add pages for corporate people, company for bulk trading  
 3.Trading function (e.g. consultation, transfort cost estimation)  
 4.Encourage upmarket brand company to buy raw materials from fair trade supplier via my app & sell products via my app  
+  
+  
+# <a name="section10"> Memo  
+  I'm sorry currently some default image or image URL is not work for my personal issue (Jul, 2017).    
+        
+          
+  
